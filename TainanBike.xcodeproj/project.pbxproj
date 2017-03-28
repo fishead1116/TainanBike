@@ -1,0 +1,735 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3A48BCDC1E8A8117009D5B19 /* TBike.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A48BCDB1E8A8117009D5B19 /* TBike.swift */; };
+		3AEB1C2E1E8A7E3F00AB7959 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEB1C2D1E8A7E3F00AB7959 /* AppDelegate.swift */; };
+		3AEB1C301E8A7E3F00AB7959 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEB1C2F1E8A7E3F00AB7959 /* MapViewController.swift */; };
+		3AEB1C331E8A7E3F00AB7959 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AEB1C311E8A7E3F00AB7959 /* Main.storyboard */; };
+		3AEB1C351E8A7E3F00AB7959 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AEB1C341E8A7E3F00AB7959 /* Assets.xcassets */; };
+		3AEB1C381E8A7E3F00AB7959 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AEB1C361E8A7E3F00AB7959 /* LaunchScreen.storyboard */; };
+		3AEB1C431E8A7E3F00AB7959 /* TainanBikeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEB1C421E8A7E3F00AB7959 /* TainanBikeTests.swift */; };
+		3AEB1C4E1E8A7E3F00AB7959 /* TainanBikeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEB1C4D1E8A7E3F00AB7959 /* TainanBikeUITests.swift */; };
+		B0D31A2FA787015133320685 /* Pods_TainanBikeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A27A18FCC5454E6CBCF042B2 /* Pods_TainanBikeTests.framework */; };
+		F5950749B3CCBCF9325A8471 /* Pods_TainanBikeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13AC8193661F3095A8C2F12E /* Pods_TainanBikeUITests.framework */; };
+		FEB579FBC162C9BEF29EBA1B /* Pods_TainanBike.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBA0D3DE7947F02BAB265945 /* Pods_TainanBike.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3AEB1C3F1E8A7E3F00AB7959 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3AEB1C221E8A7E3F00AB7959 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3AEB1C291E8A7E3F00AB7959;
+			remoteInfo = TainanBike;
+		};
+		3AEB1C4A1E8A7E3F00AB7959 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3AEB1C221E8A7E3F00AB7959 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3AEB1C291E8A7E3F00AB7959;
+			remoteInfo = TainanBike;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0155D18B44CD372DDAC820F3 /* Pods-TainanBikeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TainanBikeUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TainanBikeUITests/Pods-TainanBikeUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		13AC8193661F3095A8C2F12E /* Pods_TainanBikeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TainanBikeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C676977373585522CC9AE1B /* Pods-TainanBikeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TainanBikeUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TainanBikeUITests/Pods-TainanBikeUITests.release.xcconfig"; sourceTree = "<group>"; };
+		3A48BCDB1E8A8117009D5B19 /* TBike.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TBike.swift; sourceTree = "<group>"; };
+		3ACAA517BFA59316B23A5836 /* Pods-TainanBike.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TainanBike.release.xcconfig"; path = "Pods/Target Support Files/Pods-TainanBike/Pods-TainanBike.release.xcconfig"; sourceTree = "<group>"; };
+		3AEB1C2A1E8A7E3F00AB7959 /* TainanBike.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TainanBike.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3AEB1C2D1E8A7E3F00AB7959 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3AEB1C2F1E8A7E3F00AB7959 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		3AEB1C321E8A7E3F00AB7959 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3AEB1C341E8A7E3F00AB7959 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3AEB1C371E8A7E3F00AB7959 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3AEB1C391E8A7E3F00AB7959 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3AEB1C3E1E8A7E3F00AB7959 /* TainanBikeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TainanBikeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3AEB1C421E8A7E3F00AB7959 /* TainanBikeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TainanBikeTests.swift; sourceTree = "<group>"; };
+		3AEB1C441E8A7E3F00AB7959 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3AEB1C491E8A7E3F00AB7959 /* TainanBikeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TainanBikeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3AEB1C4D1E8A7E3F00AB7959 /* TainanBikeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TainanBikeUITests.swift; sourceTree = "<group>"; };
+		3AEB1C4F1E8A7E3F00AB7959 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A27A18FCC5454E6CBCF042B2 /* Pods_TainanBikeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TainanBikeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C6FF71601A1C3158E31BA914 /* Pods-TainanBikeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TainanBikeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TainanBikeTests/Pods-TainanBikeTests.release.xcconfig"; sourceTree = "<group>"; };
+		E28EA811E971AFC6185F5CA6 /* Pods-TainanBike.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TainanBike.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TainanBike/Pods-TainanBike.debug.xcconfig"; sourceTree = "<group>"; };
+		EBA0D3DE7947F02BAB265945 /* Pods_TainanBike.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TainanBike.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FDA55FB5254046748DFC1F15 /* Pods-TainanBikeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TainanBikeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TainanBikeTests/Pods-TainanBikeTests.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3AEB1C271E8A7E3F00AB7959 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FEB579FBC162C9BEF29EBA1B /* Pods_TainanBike.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3AEB1C3B1E8A7E3F00AB7959 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B0D31A2FA787015133320685 /* Pods_TainanBikeTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3AEB1C461E8A7E3F00AB7959 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5950749B3CCBCF9325A8471 /* Pods_TainanBikeUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1F401F5E7F78F63ACCEC57FA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EBA0D3DE7947F02BAB265945 /* Pods_TainanBike.framework */,
+				A27A18FCC5454E6CBCF042B2 /* Pods_TainanBikeTests.framework */,
+				13AC8193661F3095A8C2F12E /* Pods_TainanBikeUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3AEB1C211E8A7E3F00AB7959 = {
+			isa = PBXGroup;
+			children = (
+				3AEB1C2C1E8A7E3F00AB7959 /* TainanBike */,
+				3AEB1C411E8A7E3F00AB7959 /* TainanBikeTests */,
+				3AEB1C4C1E8A7E3F00AB7959 /* TainanBikeUITests */,
+				3AEB1C2B1E8A7E3F00AB7959 /* Products */,
+				F128D881282E6940AA212E6A /* Pods */,
+				1F401F5E7F78F63ACCEC57FA /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		3AEB1C2B1E8A7E3F00AB7959 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3AEB1C2A1E8A7E3F00AB7959 /* TainanBike.app */,
+				3AEB1C3E1E8A7E3F00AB7959 /* TainanBikeTests.xctest */,
+				3AEB1C491E8A7E3F00AB7959 /* TainanBikeUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3AEB1C2C1E8A7E3F00AB7959 /* TainanBike */ = {
+			isa = PBXGroup;
+			children = (
+				3AEB1C2D1E8A7E3F00AB7959 /* AppDelegate.swift */,
+				3AEB1C2F1E8A7E3F00AB7959 /* MapViewController.swift */,
+				3AEB1C311E8A7E3F00AB7959 /* Main.storyboard */,
+				3AEB1C341E8A7E3F00AB7959 /* Assets.xcassets */,
+				3AEB1C361E8A7E3F00AB7959 /* LaunchScreen.storyboard */,
+				3AEB1C391E8A7E3F00AB7959 /* Info.plist */,
+				3A48BCDB1E8A8117009D5B19 /* TBike.swift */,
+			);
+			path = TainanBike;
+			sourceTree = "<group>";
+		};
+		3AEB1C411E8A7E3F00AB7959 /* TainanBikeTests */ = {
+			isa = PBXGroup;
+			children = (
+				3AEB1C421E8A7E3F00AB7959 /* TainanBikeTests.swift */,
+				3AEB1C441E8A7E3F00AB7959 /* Info.plist */,
+			);
+			path = TainanBikeTests;
+			sourceTree = "<group>";
+		};
+		3AEB1C4C1E8A7E3F00AB7959 /* TainanBikeUITests */ = {
+			isa = PBXGroup;
+			children = (
+				3AEB1C4D1E8A7E3F00AB7959 /* TainanBikeUITests.swift */,
+				3AEB1C4F1E8A7E3F00AB7959 /* Info.plist */,
+			);
+			path = TainanBikeUITests;
+			sourceTree = "<group>";
+		};
+		F128D881282E6940AA212E6A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E28EA811E971AFC6185F5CA6 /* Pods-TainanBike.debug.xcconfig */,
+				3ACAA517BFA59316B23A5836 /* Pods-TainanBike.release.xcconfig */,
+				FDA55FB5254046748DFC1F15 /* Pods-TainanBikeTests.debug.xcconfig */,
+				C6FF71601A1C3158E31BA914 /* Pods-TainanBikeTests.release.xcconfig */,
+				0155D18B44CD372DDAC820F3 /* Pods-TainanBikeUITests.debug.xcconfig */,
+				2C676977373585522CC9AE1B /* Pods-TainanBikeUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3AEB1C291E8A7E3F00AB7959 /* TainanBike */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3AEB1C521E8A7E3F00AB7959 /* Build configuration list for PBXNativeTarget "TainanBike" */;
+			buildPhases = (
+				0DFF320A9F660A6D91239927 /* [CP] Check Pods Manifest.lock */,
+				3AEB1C261E8A7E3F00AB7959 /* Sources */,
+				3AEB1C271E8A7E3F00AB7959 /* Frameworks */,
+				3AEB1C281E8A7E3F00AB7959 /* Resources */,
+				86714669ED17413DD31B5988 /* [CP] Embed Pods Frameworks */,
+				1258D4A494AB05603645DBEA /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TainanBike;
+			productName = TainanBike;
+			productReference = 3AEB1C2A1E8A7E3F00AB7959 /* TainanBike.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3AEB1C3D1E8A7E3F00AB7959 /* TainanBikeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3AEB1C551E8A7E3F00AB7959 /* Build configuration list for PBXNativeTarget "TainanBikeTests" */;
+			buildPhases = (
+				3E0CDF97225CC86465EF2488 /* [CP] Check Pods Manifest.lock */,
+				3AEB1C3A1E8A7E3F00AB7959 /* Sources */,
+				3AEB1C3B1E8A7E3F00AB7959 /* Frameworks */,
+				3AEB1C3C1E8A7E3F00AB7959 /* Resources */,
+				FD81C917CC5755C9B4358E66 /* [CP] Embed Pods Frameworks */,
+				9DB6DCBE1118D0BF94FC630D /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3AEB1C401E8A7E3F00AB7959 /* PBXTargetDependency */,
+			);
+			name = TainanBikeTests;
+			productName = TainanBikeTests;
+			productReference = 3AEB1C3E1E8A7E3F00AB7959 /* TainanBikeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		3AEB1C481E8A7E3F00AB7959 /* TainanBikeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3AEB1C581E8A7E3F00AB7959 /* Build configuration list for PBXNativeTarget "TainanBikeUITests" */;
+			buildPhases = (
+				DDFAE07D46E27E100B196EDB /* [CP] Check Pods Manifest.lock */,
+				3AEB1C451E8A7E3F00AB7959 /* Sources */,
+				3AEB1C461E8A7E3F00AB7959 /* Frameworks */,
+				3AEB1C471E8A7E3F00AB7959 /* Resources */,
+				BBBAC055D4CAA212F3188C25 /* [CP] Embed Pods Frameworks */,
+				39784BB30C1D7536982B735C /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3AEB1C4B1E8A7E3F00AB7959 /* PBXTargetDependency */,
+			);
+			name = TainanBikeUITests;
+			productName = TainanBikeUITests;
+			productReference = 3AEB1C491E8A7E3F00AB7959 /* TainanBikeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3AEB1C221E8A7E3F00AB7959 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "Li Yun Jung";
+				TargetAttributes = {
+					3AEB1C291E8A7E3F00AB7959 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = Y9HFUQEZ8V;
+						ProvisioningStyle = Automatic;
+					};
+					3AEB1C3D1E8A7E3F00AB7959 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = Y9HFUQEZ8V;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 3AEB1C291E8A7E3F00AB7959;
+					};
+					3AEB1C481E8A7E3F00AB7959 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = Y9HFUQEZ8V;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 3AEB1C291E8A7E3F00AB7959;
+					};
+				};
+			};
+			buildConfigurationList = 3AEB1C251E8A7E3F00AB7959 /* Build configuration list for PBXProject "TainanBike" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3AEB1C211E8A7E3F00AB7959;
+			productRefGroup = 3AEB1C2B1E8A7E3F00AB7959 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3AEB1C291E8A7E3F00AB7959 /* TainanBike */,
+				3AEB1C3D1E8A7E3F00AB7959 /* TainanBikeTests */,
+				3AEB1C481E8A7E3F00AB7959 /* TainanBikeUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3AEB1C281E8A7E3F00AB7959 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3AEB1C381E8A7E3F00AB7959 /* LaunchScreen.storyboard in Resources */,
+				3AEB1C351E8A7E3F00AB7959 /* Assets.xcassets in Resources */,
+				3AEB1C331E8A7E3F00AB7959 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3AEB1C3C1E8A7E3F00AB7959 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3AEB1C471E8A7E3F00AB7959 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0DFF320A9F660A6D91239927 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		1258D4A494AB05603645DBEA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TainanBike/Pods-TainanBike-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		39784BB30C1D7536982B735C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TainanBikeUITests/Pods-TainanBikeUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3E0CDF97225CC86465EF2488 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		86714669ED17413DD31B5988 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TainanBike/Pods-TainanBike-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9DB6DCBE1118D0BF94FC630D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TainanBikeTests/Pods-TainanBikeTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BBBAC055D4CAA212F3188C25 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TainanBikeUITests/Pods-TainanBikeUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DDFAE07D46E27E100B196EDB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		FD81C917CC5755C9B4358E66 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TainanBikeTests/Pods-TainanBikeTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3AEB1C261E8A7E3F00AB7959 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A48BCDC1E8A8117009D5B19 /* TBike.swift in Sources */,
+				3AEB1C301E8A7E3F00AB7959 /* MapViewController.swift in Sources */,
+				3AEB1C2E1E8A7E3F00AB7959 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3AEB1C3A1E8A7E3F00AB7959 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3AEB1C431E8A7E3F00AB7959 /* TainanBikeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3AEB1C451E8A7E3F00AB7959 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3AEB1C4E1E8A7E3F00AB7959 /* TainanBikeUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3AEB1C401E8A7E3F00AB7959 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3AEB1C291E8A7E3F00AB7959 /* TainanBike */;
+			targetProxy = 3AEB1C3F1E8A7E3F00AB7959 /* PBXContainerItemProxy */;
+		};
+		3AEB1C4B1E8A7E3F00AB7959 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3AEB1C291E8A7E3F00AB7959 /* TainanBike */;
+			targetProxy = 3AEB1C4A1E8A7E3F00AB7959 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3AEB1C311E8A7E3F00AB7959 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3AEB1C321E8A7E3F00AB7959 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3AEB1C361E8A7E3F00AB7959 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3AEB1C371E8A7E3F00AB7959 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3AEB1C501E8A7E3F00AB7959 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3AEB1C511E8A7E3F00AB7959 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3AEB1C531E8A7E3F00AB7959 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E28EA811E971AFC6185F5CA6 /* Pods-TainanBike.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = Y9HFUQEZ8V;
+				INFOPLIST_FILE = TainanBike/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ddfish1116.TainanBike;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		3AEB1C541E8A7E3F00AB7959 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3ACAA517BFA59316B23A5836 /* Pods-TainanBike.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = Y9HFUQEZ8V;
+				INFOPLIST_FILE = TainanBike/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ddfish1116.TainanBike;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		3AEB1C561E8A7E3F00AB7959 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FDA55FB5254046748DFC1F15 /* Pods-TainanBikeTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = Y9HFUQEZ8V;
+				INFOPLIST_FILE = TainanBikeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ddfish1116.TainanBikeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TainanBike.app/TainanBike";
+			};
+			name = Debug;
+		};
+		3AEB1C571E8A7E3F00AB7959 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C6FF71601A1C3158E31BA914 /* Pods-TainanBikeTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = Y9HFUQEZ8V;
+				INFOPLIST_FILE = TainanBikeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ddfish1116.TainanBikeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TainanBike.app/TainanBike";
+			};
+			name = Release;
+		};
+		3AEB1C591E8A7E3F00AB7959 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0155D18B44CD372DDAC820F3 /* Pods-TainanBikeUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = Y9HFUQEZ8V;
+				INFOPLIST_FILE = TainanBikeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ddfish1116.TainanBikeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = TainanBike;
+			};
+			name = Debug;
+		};
+		3AEB1C5A1E8A7E3F00AB7959 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2C676977373585522CC9AE1B /* Pods-TainanBikeUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = Y9HFUQEZ8V;
+				INFOPLIST_FILE = TainanBikeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ddfish1116.TainanBikeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = TainanBike;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3AEB1C251E8A7E3F00AB7959 /* Build configuration list for PBXProject "TainanBike" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3AEB1C501E8A7E3F00AB7959 /* Debug */,
+				3AEB1C511E8A7E3F00AB7959 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3AEB1C521E8A7E3F00AB7959 /* Build configuration list for PBXNativeTarget "TainanBike" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3AEB1C531E8A7E3F00AB7959 /* Debug */,
+				3AEB1C541E8A7E3F00AB7959 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3AEB1C551E8A7E3F00AB7959 /* Build configuration list for PBXNativeTarget "TainanBikeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3AEB1C561E8A7E3F00AB7959 /* Debug */,
+				3AEB1C571E8A7E3F00AB7959 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3AEB1C581E8A7E3F00AB7959 /* Build configuration list for PBXNativeTarget "TainanBikeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3AEB1C591E8A7E3F00AB7959 /* Debug */,
+				3AEB1C5A1E8A7E3F00AB7959 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3AEB1C221E8A7E3F00AB7959 /* Project object */;
+}
