@@ -78,18 +78,20 @@ class TBike{
     
     }
     
-    static func getTBikeStatus() {
+    static func getTBikeStatus(completionHandler : @escaping ([TBike]) -> ()) {
     
         Alamofire.request(tBikeUrl, method: HTTPMethod.get, parameters: nil, encoding: JSONEncoding.default	, headers: nil).responseJSON { (response : DataResponse<Any>) in
             if let value = response.result.value{
                 let json = JSON(value)
-                print(json)
+                var bikes : [TBike] = []
                 if let array = json.array{
                     for item in array{
-                        print(jsonToTBike(json: item))
+                        if let bike = jsonToTBike(json: item){
+                            bikes.append(bike)
+                        }
                     }
                 }
-                
+                completionHandler(bikes)
             }
             
         }
