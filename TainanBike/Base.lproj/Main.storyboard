@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Map View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="MapViewController" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MapViewController" customModule="TainanBike" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -20,8 +21,38 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="4rh-fQ-6xp">
+                                <rect key="frame" x="16" y="30" width="343" height="29"/>
+                                <segments>
+                                    <segment title="站點"/>
+                                    <segment title="找空車"/>
+                                    <segment title="找空位"/>
+                                </segments>
+                                <connections>
+                                    <action selector="optionValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="v7a-60-sz9"/>
+                                </connections>
+                            </segmentedControl>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E9L-5K-vN2" customClass="GMSMapView">
+                                <rect key="frame" x="16" y="68" width="343" height="599"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="E9L-5K-vN2" firstAttribute="top" secondItem="4rh-fQ-6xp" secondAttribute="bottom" constant="10" id="5oV-Ou-FTJ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="4rh-fQ-6xp" secondAttribute="trailing" id="BYq-H2-rqq"/>
+                            <constraint firstItem="4rh-fQ-6xp" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="ID0-bp-Nbn"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="E9L-5K-vN2" secondAttribute="trailing" id="OTz-AR-mh1"/>
+                            <constraint firstItem="4rh-fQ-6xp" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="SAT-RA-OtD"/>
+                            <constraint firstItem="E9L-5K-vN2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="eQO-NU-mWR"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="E9L-5K-vN2" secondAttribute="bottom" id="sEe-SF-ygq"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="mapView" destination="E9L-5K-vN2" id="vYE-Ud-4wO"/>
+                        <outlet property="optionSegmentedControl" destination="4rh-fQ-6xp" id="Shg-QA-ASN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

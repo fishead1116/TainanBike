@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CustomInfoView" customModule="TainanBike" customModuleProvider="target">
+            <connections>
+                <outlet property="availableBikeLabel" destination="elc-Qd-Q82" id="GX5-NF-IiI"/>
+                <outlet property="availableSpaceLabel" destination="f2w-OE-9V1" id="d7Z-hh-mJD"/>
+                <outlet property="nameLabel" destination="SJp-OQ-p1t" id="taW-Vu-xWN"/>
+                <outlet property="updateTimeLabel" destination="iuq-R5-JkY" id="1sF-LW-Mce"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="240" height="155"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SJp-OQ-p1t">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="35"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="35" id="QKT-2s-hOk"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                    <color key="textColor" red="0.12049785559152258" green="0.69509438451776651" blue="0.27908575315626055" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="空車：32" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="elc-Qd-Q82">
+                    <rect key="frame" x="0.0" y="45" width="120" height="35"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="35" id="rZD-uy-UpQ"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.69509438451776651" green="0.059977806458209777" blue="0.3679683017156915" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="空位：32" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f2w-OE-9V1">
+                    <rect key="frame" x="120" y="45" width="120" height="35"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.10083403342778591" green="0.17322777131162617" blue="0.69509438451776651" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="更新時間：2017/04/07 20:29" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iuq-R5-JkY">
+                    <rect key="frame" x="0.0" y="90" width="240" height="25"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="25" id="ida-dt-pGv"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d1y-L8-Cdo">
+                    <rect key="frame" x="23" y="120" width="32" height="32"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="32" id="06D-DT-FEd"/>
+                        <constraint firstAttribute="height" constant="32" id="bI3-iH-pwa"/>
+                    </constraints>
+                    <state key="normal" image="Google_Maps_Icon.png"/>
+                    <connections>
+                        <action selector="buttonClick:" destination="-1" eventType="touchUpInside" id="wSf-8s-WaU"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="elc-Qd-Q82" firstAttribute="leading" secondItem="SJp-OQ-p1t" secondAttribute="leading" id="5TF-Ua-vUR"/>
+                <constraint firstItem="iuq-R5-JkY" firstAttribute="top" secondItem="elc-Qd-Q82" secondAttribute="bottom" constant="10" id="DsV-bL-bWA"/>
+                <constraint firstItem="d1y-L8-Cdo" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="23" id="KJ7-gY-ziR"/>
+                <constraint firstItem="SJp-OQ-p1t" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" id="R96-AI-B7X"/>
+                <constraint firstItem="elc-Qd-Q82" firstAttribute="width" secondItem="SJp-OQ-p1t" secondAttribute="width" multiplier="1:2" id="Tmx-hi-MRi"/>
+                <constraint firstItem="f2w-OE-9V1" firstAttribute="trailing" secondItem="SJp-OQ-p1t" secondAttribute="trailing" id="aua-9n-hIe"/>
+                <constraint firstItem="iuq-R5-JkY" firstAttribute="trailing" secondItem="f2w-OE-9V1" secondAttribute="trailing" id="cD1-n2-oXs"/>
+                <constraint firstItem="d1y-L8-Cdo" firstAttribute="top" secondItem="iuq-R5-JkY" secondAttribute="bottom" constant="5" id="dVI-24-Zei"/>
+                <constraint firstItem="elc-Qd-Q82" firstAttribute="top" secondItem="SJp-OQ-p1t" secondAttribute="bottom" constant="10" id="exV-0d-Af1"/>
+                <constraint firstItem="SJp-OQ-p1t" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="fiI-Sx-hO9"/>
+                <constraint firstItem="f2w-OE-9V1" firstAttribute="top" secondItem="elc-Qd-Q82" secondAttribute="top" id="ihG-Pz-Ri8"/>
+                <constraint firstItem="iuq-R5-JkY" firstAttribute="leading" secondItem="elc-Qd-Q82" secondAttribute="leading" id="s0g-0K-jOu"/>
+                <constraint firstItem="f2w-OE-9V1" firstAttribute="leading" secondItem="elc-Qd-Q82" secondAttribute="trailing" id="uE7-9C-tJd"/>
+                <constraint firstItem="SJp-OQ-p1t" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="vVK-sa-sR5"/>
+                <constraint firstItem="f2w-OE-9V1" firstAttribute="bottom" secondItem="elc-Qd-Q82" secondAttribute="bottom" id="wlY-HD-fA1"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-38" y="12"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Google_Maps_Icon.png" width="256" height="256"/>
+    </resources>
+</document>
