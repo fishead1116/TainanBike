@@ -6,6 +6,7 @@ target 'TainanBike' do
   pod 'Alamofire'
   pod 'SwiftyJSON'
   pod 'GoogleMaps'
+  pod 'GooglePlaces'
   # Pods for TainanBike
 
   target 'TainanBikeTests' do

@@ -28,6 +28,10 @@ THE SOFTWARE.
 
 Copyright 2017 Google
 
+## GooglePlaces
+
+Copyright 2017 Google
+
 ## SwiftyJSON
 
 The MIT License (MIT)

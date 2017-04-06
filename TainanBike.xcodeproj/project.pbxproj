@@ -8,6 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		3A48BCDC1E8A8117009D5B19 /* TBike.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A48BCDB1E8A8117009D5B19 /* TBike.swift */; };
+		3A86C1DC1E9665CE0005DB01 /* CustomInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A86C1DB1E9665CE0005DB01 /* CustomInfoView.swift */; };
+		3A86C1DE1E9665E00005DB01 /* CustomInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A86C1DD1E9665E00005DB01 /* CustomInfoView.xib */; };
+		3A86C1E01E966DAA0005DB01 /* Google_Maps_Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A86C1DF1E966DAA0005DB01 /* Google_Maps_Icon.png */; };
+		3AD58BBC1E8D2F2D001FD891 /* placeholder_32.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AD58BBB1E8D2F2D001FD891 /* placeholder_32.png */; };
+		3AD58BBE1E8D2F57001FD891 /* placeholder_64.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AD58BBD1E8D2F57001FD891 /* placeholder_64.png */; };
+		3AD58BC51E8D33C3001FD891 /* CustomPinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD58BC41E8D33C3001FD891 /* CustomPinView.swift */; };
+		3AD58BC71E8D33EA001FD891 /* CustomPinView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3AD58BC61E8D33EA001FD891 /* CustomPinView.xib */; };
+		3ADDB11F1E93828600AE690E /* placeholder_red.png in Resources */ = {isa = PBXBuildFile; fileRef = 3ADDB11E1E93828600AE690E /* placeholder_red.png */; };
+		3ADDB1221E9382B100AE690E /* placeholder_blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 3ADDB1201E9382B100AE690E /* placeholder_blue.png */; };
+		3ADDB1231E9382B100AE690E /* placeholder_green.png in Resources */ = {isa = PBXBuildFile; fileRef = 3ADDB1211E9382B100AE690E /* placeholder_green.png */; };
 		3AEB1C2E1E8A7E3F00AB7959 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEB1C2D1E8A7E3F00AB7959 /* AppDelegate.swift */; };
 		3AEB1C301E8A7E3F00AB7959 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEB1C2F1E8A7E3F00AB7959 /* MapViewController.swift */; };
 		3AEB1C331E8A7E3F00AB7959 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AEB1C311E8A7E3F00AB7959 /* Main.storyboard */; };
@@ -42,7 +52,17 @@
 		13AC8193661F3095A8C2F12E /* Pods_TainanBikeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TainanBikeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C676977373585522CC9AE1B /* Pods-TainanBikeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TainanBikeUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TainanBikeUITests/Pods-TainanBikeUITests.release.xcconfig"; sourceTree = "<group>"; };
 		3A48BCDB1E8A8117009D5B19 /* TBike.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TBike.swift; sourceTree = "<group>"; };
+		3A86C1DB1E9665CE0005DB01 /* CustomInfoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomInfoView.swift; path = View/CustomInfoView.swift; sourceTree = "<group>"; };
+		3A86C1DD1E9665E00005DB01 /* CustomInfoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CustomInfoView.xib; path = View/CustomInfoView.xib; sourceTree = "<group>"; };
+		3A86C1DF1E966DAA0005DB01 /* Google_Maps_Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Google_Maps_Icon.png; sourceTree = "<group>"; };
 		3ACAA517BFA59316B23A5836 /* Pods-TainanBike.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TainanBike.release.xcconfig"; path = "Pods/Target Support Files/Pods-TainanBike/Pods-TainanBike.release.xcconfig"; sourceTree = "<group>"; };
+		3AD58BBB1E8D2F2D001FD891 /* placeholder_32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeholder_32.png; sourceTree = "<group>"; };
+		3AD58BBD1E8D2F57001FD891 /* placeholder_64.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeholder_64.png; sourceTree = "<group>"; };
+		3AD58BC41E8D33C3001FD891 /* CustomPinView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomPinView.swift; path = View/CustomPinView.swift; sourceTree = "<group>"; };
+		3AD58BC61E8D33EA001FD891 /* CustomPinView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CustomPinView.xib; path = View/CustomPinView.xib; sourceTree = "<group>"; };
+		3ADDB11E1E93828600AE690E /* placeholder_red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeholder_red.png; sourceTree = "<group>"; };
+		3ADDB1201E9382B100AE690E /* placeholder_blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeholder_blue.png; sourceTree = "<group>"; };
+		3ADDB1211E9382B100AE690E /* placeholder_green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeholder_green.png; sourceTree = "<group>"; };
 		3AEB1C2A1E8A7E3F00AB7959 /* TainanBike.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TainanBike.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AEB1C2D1E8A7E3F00AB7959 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3AEB1C2F1E8A7E3F00AB7959 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
@@ -101,6 +121,30 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		3AD58BBA1E8D2EFC001FD891 /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				3A86C1DF1E966DAA0005DB01 /* Google_Maps_Icon.png */,
+				3ADDB1201E9382B100AE690E /* placeholder_blue.png */,
+				3ADDB1211E9382B100AE690E /* placeholder_green.png */,
+				3ADDB11E1E93828600AE690E /* placeholder_red.png */,
+				3AD58BBD1E8D2F57001FD891 /* placeholder_64.png */,
+				3AD58BBB1E8D2F2D001FD891 /* placeholder_32.png */,
+			);
+			path = Image;
+			sourceTree = "<group>";
+		};
+		3AD58BBF1E8D32E0001FD891 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3AD58BC41E8D33C3001FD891 /* CustomPinView.swift */,
+				3AD58BC61E8D33EA001FD891 /* CustomPinView.xib */,
+				3A86C1DB1E9665CE0005DB01 /* CustomInfoView.swift */,
+				3A86C1DD1E9665E00005DB01 /* CustomInfoView.xib */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
 		3AEB1C211E8A7E3F00AB7959 = {
 			isa = PBXGroup;
 			children = (
@@ -126,6 +170,8 @@
 		3AEB1C2C1E8A7E3F00AB7959 /* TainanBike */ = {
 			isa = PBXGroup;
 			children = (
+				3AD58BBF1E8D32E0001FD891 /* View */,
+				3AD58BBA1E8D2EFC001FD891 /* Image */,
 				3AEB1C2D1E8A7E3F00AB7959 /* AppDelegate.swift */,
 				3AEB1C2F1E8A7E3F00AB7959 /* MapViewController.swift */,
 				3AEB1C311E8A7E3F00AB7959 /* Main.storyboard */,
@@ -288,8 +334,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				3AEB1C381E8A7E3F00AB7959 /* LaunchScreen.storyboard in Resources */,
+				3ADDB1231E9382B100AE690E /* placeholder_green.png in Resources */,
+				3ADDB1221E9382B100AE690E /* placeholder_blue.png in Resources */,
+				3ADDB11F1E93828600AE690E /* placeholder_red.png in Resources */,
+				3AD58BBC1E8D2F2D001FD891 /* placeholder_32.png in Resources */,
+				3A86C1DE1E9665E00005DB01 /* CustomInfoView.xib in Resources */,
 				3AEB1C351E8A7E3F00AB7959 /* Assets.xcassets in Resources */,
+				3A86C1E01E966DAA0005DB01 /* Google_Maps_Icon.png in Resources */,
+				3AD58BBE1E8D2F57001FD891 /* placeholder_64.png in Resources */,
 				3AEB1C331E8A7E3F00AB7959 /* Main.storyboard in Resources */,
+				3AD58BC71E8D33EA001FD891 /* CustomPinView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -453,8 +507,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A48BCDC1E8A8117009D5B19 /* TBike.swift in Sources */,
+				3A86C1DC1E9665CE0005DB01 /* CustomInfoView.swift in Sources */,
 				3AEB1C301E8A7E3F00AB7959 /* MapViewController.swift in Sources */,
 				3AEB1C2E1E8A7E3F00AB7959 /* AppDelegate.swift in Sources */,
+				3AD58BC51E8D33C3001FD891 /* CustomPinView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
