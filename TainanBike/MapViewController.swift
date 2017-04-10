@@ -108,13 +108,18 @@ extension MapViewController : GMSMapViewDelegate {
     func mapView(_ mapView: GMSMapView, idleAt position: GMSCameraPosition) {
         reloadMarker()
     }
+    
     func mapView(_ mapView: GMSMapView, markerInfoWindow marker:
         GMSMarker) -> UIView? {
         
         return UIView()
+    }
+    
+    func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
         
+        //return true
         guard let pinView = marker.iconView as? CustomPinView else {
-            return nil
+            return true
         }
         selectedMarker = marker
         
@@ -122,39 +127,28 @@ extension MapViewController : GMSMapViewDelegate {
         infoView = CustomInfoView(frame: CGRect(x: 0, y: 0, width: 240  , height: 155))
         infoView.setBike(bike: pinView.bike)
         
+        infoView.center = mapView.projection.point(for: CLLocationCoordinate2DMake(pinView.bike!.latitude, pinView.bike!.longitude)) + infoViewOffset
         
-        //infoView.center = mapView.projection.point(for: CLLocationCoordinate2DMake(pinView.bike!.latitude, pinView.bike!.longitude))
-        return infoView
+         mapView.addSubview(infoView)
+        
+        return false
     }
     
-//    func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
-//        
-//        return true
-//        guard let pinView = marker.iconView as? CustomPinView else {
-//            return true
-//        }
-//        selectedMarker = marker
-//        
-//        infoView.removeFromSuperview()
-//        infoView = CustomInfoView(frame: CGRect(x: 0, y: 0, width: 240  , height: 155))
-//        infoView.setBike(bike: pinView.bike)
-//        
-//        infoView.center = mapView.projection.point(for: CLLocationCoordinate2DMake(pinView.bike!.latitude, pinView.bike!.longitude))
-//         mapView.addSubview(infoView)
-//        
-//        return false
-//    }
+    func mapView(_ mapView: GMSMapView, didChange position: GMSCameraPosition) {
+        
+        guard let pinView = selectedMarker?.iconView as? CustomPinView else{
+            return
+        }
+        infoView.center = mapView.projection.point(for: CLLocationCoordinate2DMake(pinView.bike!.latitude, pinView.bike!.longitude)) + infoViewOffset
+    }
     
-//    func mapView(_ mapView: GMSMapView, didChange position: GMSCameraPosition) {
-//        
-//        guard let pinView = selectedMarker?.iconView as? CustomPinView else{
-//            return
-//        }
-//         infoView.center = mapView.projection.point(for: CLLocationCoordinate2DMake(pinView.bike!.latitude, pinView.bike!.longitude))
-//    }
-//    
-//    func mapView(_ mapView: GMSMapView, didTapAt coordinate: CLLocationCoordinate2D) {
-//        infoView.removeFromSuperview()
-//    }
+    func mapView(_ mapView: GMSMapView, didTapAt coordinate: CLLocationCoordinate2D) {
+        infoView.removeFromSuperview()
+    }
 }
+
+func +( left: CGPoint , right : CGPoint) -> CGPoint {
+    return CGPoint(x: left.x + right.x, y: left.y + right.y)
+}
+
 
