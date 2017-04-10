@@ -8,6 +8,9 @@
 
 import UIKit
 
+
+let infoViewOffset = CGPoint(x:0.0,y:-110.0)
+
 class CustomInfoView: UIView {
 
     var view: UIView!
@@ -24,6 +27,9 @@ class CustomInfoView: UIView {
             nameLabel.text = "\(bike!.stationName)"
             availableBikeLabel.text = "空車：\(bike!.avaliableBikeCount)"
             availableSpaceLabel.text = "空位：\(bike!.avaliableSpaceCount)"
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "yyyy/MM/dd HH:mm"
+            updateTimeLabel.text = "更新時間：" + dateFormatter.string(from: bike!.updateTime)
             
         }
     }
