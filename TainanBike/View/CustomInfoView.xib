@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -14,6 +14,8 @@
             <connections>
                 <outlet property="availableBikeLabel" destination="elc-Qd-Q82" id="GX5-NF-IiI"/>
                 <outlet property="availableSpaceLabel" destination="f2w-OE-9V1" id="d7Z-hh-mJD"/>
+                <outlet property="distanceLabel" destination="AXt-N8-uKW" id="lBK-Vy-3Dp"/>
+                <outlet property="mapButton" destination="d1y-L8-Cdo" id="YNw-7L-Not"/>
                 <outlet property="nameLabel" destination="SJp-OQ-p1t" id="taW-Vu-xWN"/>
                 <outlet property="updateTimeLabel" destination="iuq-R5-JkY" id="1sF-LW-Mce"/>
             </connections>
@@ -63,18 +65,24 @@
                         <constraint firstAttribute="height" constant="32" id="bI3-iH-pwa"/>
                     </constraints>
                     <state key="normal" image="Google_Maps_Icon.png"/>
-                    <connections>
-                        <action selector="buttonClick:" destination="-1" eventType="touchUpInside" id="wSf-8s-WaU"/>
-                    </connections>
                 </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="距離：XX.X 公里" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AXt-N8-uKW">
+                    <rect key="frame" x="70" y="120" width="170" height="32"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="elc-Qd-Q82" firstAttribute="leading" secondItem="SJp-OQ-p1t" secondAttribute="leading" id="5TF-Ua-vUR"/>
+                <constraint firstItem="AXt-N8-uKW" firstAttribute="leading" secondItem="d1y-L8-Cdo" secondAttribute="trailing" constant="15" id="CRg-QL-MdD"/>
                 <constraint firstItem="iuq-R5-JkY" firstAttribute="top" secondItem="elc-Qd-Q82" secondAttribute="bottom" constant="10" id="DsV-bL-bWA"/>
+                <constraint firstItem="AXt-N8-uKW" firstAttribute="trailing" secondItem="iuq-R5-JkY" secondAttribute="trailing" id="GCs-nZ-x9j"/>
                 <constraint firstItem="d1y-L8-Cdo" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="23" id="KJ7-gY-ziR"/>
                 <constraint firstItem="SJp-OQ-p1t" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" id="R96-AI-B7X"/>
                 <constraint firstItem="elc-Qd-Q82" firstAttribute="width" secondItem="SJp-OQ-p1t" secondAttribute="width" multiplier="1:2" id="Tmx-hi-MRi"/>
+                <constraint firstItem="AXt-N8-uKW" firstAttribute="bottom" secondItem="d1y-L8-Cdo" secondAttribute="bottom" id="ZqK-6C-Zxl"/>
                 <constraint firstItem="f2w-OE-9V1" firstAttribute="trailing" secondItem="SJp-OQ-p1t" secondAttribute="trailing" id="aua-9n-hIe"/>
                 <constraint firstItem="iuq-R5-JkY" firstAttribute="trailing" secondItem="f2w-OE-9V1" secondAttribute="trailing" id="cD1-n2-oXs"/>
                 <constraint firstItem="d1y-L8-Cdo" firstAttribute="top" secondItem="iuq-R5-JkY" secondAttribute="bottom" constant="5" id="dVI-24-Zei"/>
@@ -85,6 +93,7 @@
                 <constraint firstItem="f2w-OE-9V1" firstAttribute="leading" secondItem="elc-Qd-Q82" secondAttribute="trailing" id="uE7-9C-tJd"/>
                 <constraint firstItem="SJp-OQ-p1t" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="vVK-sa-sR5"/>
                 <constraint firstItem="f2w-OE-9V1" firstAttribute="bottom" secondItem="elc-Qd-Q82" secondAttribute="bottom" id="wlY-HD-fA1"/>
+                <constraint firstItem="AXt-N8-uKW" firstAttribute="top" secondItem="d1y-L8-Cdo" secondAttribute="top" id="zEH-Z3-mNy"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <nil key="simulatedTopBarMetrics"/>

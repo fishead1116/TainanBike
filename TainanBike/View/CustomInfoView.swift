@@ -19,11 +19,15 @@ class CustomInfoView: UIView {
     @IBOutlet weak var availableBikeLabel: UILabel!
     @IBOutlet weak var availableSpaceLabel: UILabel!
     @IBOutlet weak var updateTimeLabel: UILabel!
+    @IBOutlet weak var mapButton: UIButton!
+    @IBOutlet weak var distanceLabel: UILabel!
+    
     var bike : TBike? {
         didSet {
             guard bike != nil else {
                 return
             }
+          
             nameLabel.text = "\(bike!.stationName)"
             availableBikeLabel.text = "空車：\(bike!.avaliableBikeCount)"
             availableSpaceLabel.text = "空位：\(bike!.avaliableSpaceCount)"
@@ -33,6 +37,16 @@ class CustomInfoView: UIView {
             
         }
     }
+    
+    var distance : Double = 0.0 {
+        didSet {
+            distanceLabel.text = String.init(format: "距離：%.1f 公里", distance)
+            if(distance < 0.0){
+                distanceLabel.text = ""
+            }
+        }
+    }
+    
     /*
     // Only override draw() if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.
@@ -89,7 +103,4 @@ class CustomInfoView: UIView {
     }
     
     
-    @IBAction func buttonClick(_ sender: Any) {
-    }
-
 }

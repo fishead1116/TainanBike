@@ -20,9 +20,12 @@ class MapViewController: UIViewController {
     @IBOutlet weak var mapView: GMSMapView!
     var placesClient: GMSPlacesClient?
     
+    var locationManager = CLLocationManager()
+    var isCameraSetted = false
+    
     var selectedMarker : GMSMarker? = nil
     var infoView = CustomInfoView(frame: CGRect(x: 0, y: 0, width: 240  , height: 155))
-
+    
     
     var bikes : [TBike] = []
     
@@ -32,13 +35,21 @@ class MapViewController: UIViewController {
         
         reloadMarker()
         
-        mapView.camera = GMSCameraPosition.camera(withLatitude: 22.932706,longitude: 120.230637, zoom: 15)
+        mapView.camera = GMSCameraPosition.camera(withLatitude: 22.932706,longitude: 120.330637, zoom: 15)
         mapView.delegate = self
         mapView.settings.compassButton = true
         mapView.settings.myLocationButton = true
         mapView.settings.setAllGesturesEnabled(true)
         
         placesClient = GMSPlacesClient.shared()
+        
+        locationManager = CLLocationManager()
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.distanceFilter = 50
+        locationManager.startUpdatingLocation()
+        locationManager.delegate = self
+        
         
         
         // Do any additional setup after loading the view, typically from a nib.
@@ -65,7 +76,7 @@ class MapViewController: UIViewController {
         UIGraphicsEndImageContext()
         return image
     }
-
+    
     func reloadMarker(){
         
         TBike.getTBikeStatus { (bikes : [TBike]) in
@@ -90,21 +101,42 @@ class MapViewController: UIViewController {
             }
             
         }
-
+        
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
+    
+    func buttonClick(_ sender: UIButton!) {
+        if let marker = sender.superview?.superview as? CustomInfoView{
+            guard let bike = marker.bike else{
+                return
+            }
+            let dLat = bike.latitude
+            let dLon = bike.longitude
+            var url : URL?  = URL(string: "http://maps.google.com/maps?f=d&saddr=&daddr=\(dLat),\(dLon)&directionsmode=walking")
+            
+            
+            if (UIApplication.shared.canOpenURL(URL(string:"comgooglemaps://")!)) {
+                
+                url = URL(string: "comgooglemaps://maps.google.com/maps?f=d&saddr=&daddr=\(dLat),\(dLon)&directionsmode=walking")
+            }
+            
+            if let url = url{
+                UIApplication.shared.open(url, options: [:], completionHandler: nil)
+            }
+            
+            
+        }
+    }
 }
 
 
 
 extension MapViewController : GMSMapViewDelegate {
-
+    
     func mapView(_ mapView: GMSMapView, idleAt position: GMSCameraPosition) {
         reloadMarker()
     }
@@ -121,15 +153,24 @@ extension MapViewController : GMSMapViewDelegate {
         guard let pinView = marker.iconView as? CustomPinView else {
             return true
         }
+        
+        
         selectedMarker = marker
         
         infoView.removeFromSuperview()
         infoView = CustomInfoView(frame: CGRect(x: 0, y: 0, width: 240  , height: 155))
         infoView.setBike(bike: pinView.bike)
+        if let myLocation = mapView.myLocation , let bike = pinView.bike {
+            let destination = CLLocation(latitude: bike.latitude, longitude: bike.longitude)
+            infoView.distance = destination.distance(from: myLocation) / 1000.0
+        }else{
+            infoView.distance = -1.0
+        }
+        infoView.mapButton.addTarget(self, action: #selector(self.buttonClick(_:)), for: UIControlEvents.touchUpInside)
         
         infoView.center = mapView.projection.point(for: CLLocationCoordinate2DMake(pinView.bike!.latitude, pinView.bike!.longitude)) + infoViewOffset
         
-         mapView.addSubview(infoView)
+        mapView.addSubview(infoView)
         
         return false
     }
@@ -145,6 +186,44 @@ extension MapViewController : GMSMapViewDelegate {
     func mapView(_ mapView: GMSMapView, didTapAt coordinate: CLLocationCoordinate2D) {
         infoView.removeFromSuperview()
     }
+    
+}
+
+extension MapViewController : CLLocationManagerDelegate{
+    
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        switch status {
+        case .restricted:
+            print("Location access was restricted.")
+        case .denied:
+            print("User denied access to location.")
+            mapView.isHidden = false
+        case .notDetermined:
+            print("Location status not determined.")
+        case .authorizedAlways: fallthrough
+        case .authorizedWhenInUse:
+            print("Location status is OK.")
+            mapView.isMyLocationEnabled = true
+        }
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        
+        guard locations.count > 0 else{
+            return
+        }
+        
+        let location = locations.last!
+        //mapView.myLocation = locations.last!
+        
+        if !isCameraSetted {
+            //first time setting camera
+            mapView.animate(to: GMSCameraPosition.camera(withTarget: location.coordinate, zoom: 15))
+            isCameraSetted = true
+        }
+    }
+    
+    
 }
 
 func +( left: CGPoint , right : CGPoint) -> CGPoint {
