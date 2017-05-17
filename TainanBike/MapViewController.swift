@@ -60,8 +60,18 @@ class MapViewController: UIViewController {
         if let mode = BikePinMode(rawValue: optionSegmentedControl.selectedSegmentIndex){
             self.pinMode = mode
             reloadMarker()
+        }else{
+            let infos = BikeInfo.readBikeInfo()
+            guard let myLocation = mapView.myLocation else{
+                return
+            }
+            for info in infos {
+                
+                let location = CLLocation(latitude: info.latitude, longitude: info.longitude)
+                let distance = location.distance(from: myLocation)
+                print("\(info.name):\(distance)m")
+            }
         }
-        
     }
     
     func imageForView(view : UIView) -> UIImage? {

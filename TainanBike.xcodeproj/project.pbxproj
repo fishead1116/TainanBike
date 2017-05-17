@@ -11,6 +11,7 @@
 		3A86C1DC1E9665CE0005DB01 /* CustomInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A86C1DB1E9665CE0005DB01 /* CustomInfoView.swift */; };
 		3A86C1DE1E9665E00005DB01 /* CustomInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A86C1DD1E9665E00005DB01 /* CustomInfoView.xib */; };
 		3A86C1E01E966DAA0005DB01 /* Google_Maps_Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A86C1DF1E966DAA0005DB01 /* Google_Maps_Icon.png */; };
+		3A9A44841ECAA111003AAE23 /* BikeInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9A44831ECAA111003AAE23 /* BikeInfo.swift */; };
 		3AD58BBC1E8D2F2D001FD891 /* placeholder_32.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AD58BBB1E8D2F2D001FD891 /* placeholder_32.png */; };
 		3AD58BBE1E8D2F57001FD891 /* placeholder_64.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AD58BBD1E8D2F57001FD891 /* placeholder_64.png */; };
 		3AD58BC51E8D33C3001FD891 /* CustomPinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD58BC41E8D33C3001FD891 /* CustomPinView.swift */; };
@@ -55,6 +56,7 @@
 		3A86C1DB1E9665CE0005DB01 /* CustomInfoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomInfoView.swift; path = View/CustomInfoView.swift; sourceTree = "<group>"; };
 		3A86C1DD1E9665E00005DB01 /* CustomInfoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CustomInfoView.xib; path = View/CustomInfoView.xib; sourceTree = "<group>"; };
 		3A86C1DF1E966DAA0005DB01 /* Google_Maps_Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Google_Maps_Icon.png; sourceTree = "<group>"; };
+		3A9A44831ECAA111003AAE23 /* BikeInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BikeInfo.swift; sourceTree = "<group>"; };
 		3ACAA517BFA59316B23A5836 /* Pods-TainanBike.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TainanBike.release.xcconfig"; path = "Pods/Target Support Files/Pods-TainanBike/Pods-TainanBike.release.xcconfig"; sourceTree = "<group>"; };
 		3AD58BBB1E8D2F2D001FD891 /* placeholder_32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeholder_32.png; sourceTree = "<group>"; };
 		3AD58BBD1E8D2F57001FD891 /* placeholder_64.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeholder_64.png; sourceTree = "<group>"; };
@@ -179,6 +181,7 @@
 				3AEB1C361E8A7E3F00AB7959 /* LaunchScreen.storyboard */,
 				3AEB1C391E8A7E3F00AB7959 /* Info.plist */,
 				3A48BCDB1E8A8117009D5B19 /* TBike.swift */,
+				3A9A44831ECAA111003AAE23 /* BikeInfo.swift */,
 			);
 			path = TainanBike;
 			sourceTree = "<group>";
@@ -510,6 +513,7 @@
 				3A86C1DC1E9665CE0005DB01 /* CustomInfoView.swift in Sources */,
 				3AEB1C301E8A7E3F00AB7959 /* MapViewController.swift in Sources */,
 				3AEB1C2E1E8A7E3F00AB7959 /* AppDelegate.swift in Sources */,
+				3A9A44841ECAA111003AAE23 /* BikeInfo.swift in Sources */,
 				3AD58BC51E8D33C3001FD891 /* CustomPinView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
