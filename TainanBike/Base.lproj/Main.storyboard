@@ -53,10 +53,43 @@
                     <connections>
                         <outlet property="mapView" destination="E9L-5K-vN2" id="vYE-Ud-4wO"/>
                         <outlet property="optionSegmentedControl" destination="4rh-fQ-6xp" id="Shg-QA-ASN"/>
+                        <segue destination="bmE-ej-Ft7" kind="show" identifier="distance" id="XQX-4Y-rxX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+        </scene>
+        <!--Distance View Controller-->
+        <scene sceneID="2bC-jv-IBd">
+            <objects>
+                <viewController id="bmE-ej-Ft7" customClass="DistanceViewController" customModule="TainanBike" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7N8-X1-Fed"/>
+                        <viewControllerLayoutGuide type="bottom" id="r1P-3b-hBX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0EW-GK-olw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Laj-md-ctH">
+                                <rect key="frame" x="92" y="165" width="161" height="176"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="goBackToOneButtonTapped:" destination="bmE-ej-Ft7" eventType="touchUpInside" id="AAD-f5-Uf2"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <segue destination="lRe-PI-d8k" kind="unwind" identifier="unwindToMapView" unwindAction="unwindToMapViewWithSegue:" id="veW-aR-5yS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="N7p-LS-BsN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="lRe-PI-d8k" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="824.79999999999995" y="35.532233883058474"/>
         </scene>
     </scenes>
 </document>

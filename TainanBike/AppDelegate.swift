@@ -21,11 +21,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         print(GMSServices.provideAPIKey("AIzaSyCH8gAt0EgLtisHnIM7cJCo-Xdy8cUmHfg"))
         print(GMSPlacesClient.provideAPIKey("AIzaSyCH8gAt0EgLtisHnIM7cJCo-Xdy8cUmHfg"))
         
-        BikeInfo.saveBikeInfo { (infos : [BikeInfo]) in
-//            for info in infos{
-//                print(info.name)
-//            }
-        }
         return true
     }
     

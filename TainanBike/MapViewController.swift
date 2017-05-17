@@ -24,10 +24,11 @@ class MapViewController: UIViewController {
     var isCameraSetted = false
     
     var selectedMarker : GMSMarker? = nil
+    var markers : [GMSMarker] = []
+
     var infoView = CustomInfoView(frame: CGRect(x: 0, y: 0, width: 240  , height: 155))
-    
-    
-    var bikes : [TBike] = []
+
+    //var bikes : [TBike] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,8 +51,6 @@ class MapViewController: UIViewController {
         locationManager.startUpdatingLocation()
         locationManager.delegate = self
         
-        
-        
         // Do any additional setup after loading the view, typically from a nib.
     }
     
@@ -61,39 +60,51 @@ class MapViewController: UIViewController {
             self.pinMode = mode
             reloadMarker()
         }else{
-            let infos = BikeInfo.readBikeInfo()
-            guard let myLocation = mapView.myLocation else{
-                return
-            }
-            for info in infos {
-                
-                let location = CLLocation(latitude: info.latitude, longitude: info.longitude)
-                let distance = location.distance(from: myLocation)
-                print("\(info.name):\(distance)m")
-            }
+            performSegue(withIdentifier: "distance", sender: self)
         }
     }
     
-    func imageForView(view : UIView) -> UIImage? {
-        
-        if(UIScreen.main.responds(to: #selector(getter: UIScreen.scale))){
-            UIGraphicsBeginImageContextWithOptions(view.frame.size, false, UIScreen.main.scale)
-        }else{
-            UIGraphicsBeginImageContext(view.frame.size)
-        }
-        view.layer.render(in: UIGraphicsGetCurrentContext()!)
-        let image = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-        return image
+//    func imageForView(view : UIView) -> UIImage? {
+//        
+//        if(UIScreen.main.responds(to: #selector(getter: UIScreen.scale))){
+//            UIGraphicsBeginImageContextWithOptions(view.frame.size, false, UIScreen.main.scale)
+//        }else{
+//            UIGraphicsBeginImageContext(view.frame.size)
+//        }
+//        view.layer.render(in: UIGraphicsGetCurrentContext()!)
+//        let image = UIGraphicsGetImageFromCurrentImageContext()
+//        UIGraphicsEndImageContext()
+//        return image
+//    }
+    
+ 
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let distance = segue.destination as? DistanceViewController{
+            distance.myLocation = mapView.myLocation
+            distance.markers = markers
+        }
+    }
+    
+    
+    @IBAction func unwindToMapView(segue:UIStoryboardSegue) {
+        
+    }
+}
+
+extension MapViewController {
     
     func reloadMarker(){
         
         TBike.getTBikeStatus { (bikes : [TBike]) in
             
-            self.bikes = bikes
-            
             self.mapView.clear()
+            self.markers = []
             
             for bike in bikes {
                 
@@ -106,17 +117,13 @@ class MapViewController: UIViewController {
                 marker.iconView = customView
                 
                 marker.map = self.mapView
-                
-                self.mapView.reloadInputViews()
+                self.markers.append(marker)
+            
             }
             
+            self.mapView.reloadInputViews()
         }
         
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     func buttonClick(_ sender: UIButton!) {
@@ -141,8 +148,8 @@ class MapViewController: UIViewController {
             
         }
     }
-}
 
+}
 
 
 extension MapViewController : GMSMapViewDelegate {
