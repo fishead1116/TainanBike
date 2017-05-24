@@ -26,6 +26,8 @@
 		3AEB1C381E8A7E3F00AB7959 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AEB1C361E8A7E3F00AB7959 /* LaunchScreen.storyboard */; };
 		3AEB1C431E8A7E3F00AB7959 /* TainanBikeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEB1C421E8A7E3F00AB7959 /* TainanBikeTests.swift */; };
 		3AEB1C4E1E8A7E3F00AB7959 /* TainanBikeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEB1C4D1E8A7E3F00AB7959 /* TainanBikeUITests.swift */; };
+		3AFD284D1ECE89EE005D8110 /* DistanceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFD284B1ECE89EE005D8110 /* DistanceTableViewCell.swift */; };
+		3AFD284E1ECE89EE005D8110 /* DistanceTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3AFD284C1ECE89EE005D8110 /* DistanceTableViewCell.xib */; };
 		B0D31A2FA787015133320685 /* Pods_TainanBikeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A27A18FCC5454E6CBCF042B2 /* Pods_TainanBikeTests.framework */; };
 		F5950749B3CCBCF9325A8471 /* Pods_TainanBikeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13AC8193661F3095A8C2F12E /* Pods_TainanBikeUITests.framework */; };
 		FEB579FBC162C9BEF29EBA1B /* Pods_TainanBike.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBA0D3DE7947F02BAB265945 /* Pods_TainanBike.framework */; };
@@ -78,6 +80,8 @@
 		3AEB1C491E8A7E3F00AB7959 /* TainanBikeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TainanBikeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AEB1C4D1E8A7E3F00AB7959 /* TainanBikeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TainanBikeUITests.swift; sourceTree = "<group>"; };
 		3AEB1C4F1E8A7E3F00AB7959 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3AFD284B1ECE89EE005D8110 /* DistanceTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DistanceTableViewCell.swift; path = View/DistanceTableViewCell.swift; sourceTree = "<group>"; };
+		3AFD284C1ECE89EE005D8110 /* DistanceTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DistanceTableViewCell.xib; path = View/DistanceTableViewCell.xib; sourceTree = "<group>"; };
 		A27A18FCC5454E6CBCF042B2 /* Pods_TainanBikeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TainanBikeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6FF71601A1C3158E31BA914 /* Pods-TainanBikeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TainanBikeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TainanBikeTests/Pods-TainanBikeTests.release.xcconfig"; sourceTree = "<group>"; };
 		E28EA811E971AFC6185F5CA6 /* Pods-TainanBike.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TainanBike.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TainanBike/Pods-TainanBike.debug.xcconfig"; sourceTree = "<group>"; };
@@ -143,6 +147,8 @@
 				3AD58BC61E8D33EA001FD891 /* CustomPinView.xib */,
 				3A86C1DB1E9665CE0005DB01 /* CustomInfoView.swift */,
 				3A86C1DD1E9665E00005DB01 /* CustomInfoView.xib */,
+				3AFD284B1ECE89EE005D8110 /* DistanceTableViewCell.swift */,
+				3AFD284C1ECE89EE005D8110 /* DistanceTableViewCell.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -344,6 +350,7 @@
 				3A86C1DE1E9665E00005DB01 /* CustomInfoView.xib in Resources */,
 				3AEB1C351E8A7E3F00AB7959 /* Assets.xcassets in Resources */,
 				3A86C1E01E966DAA0005DB01 /* Google_Maps_Icon.png in Resources */,
+				3AFD284E1ECE89EE005D8110 /* DistanceTableViewCell.xib in Resources */,
 				3AD58BBE1E8D2F57001FD891 /* placeholder_64.png in Resources */,
 				3AEB1C331E8A7E3F00AB7959 /* Main.storyboard in Resources */,
 				3AD58BC71E8D33EA001FD891 /* CustomPinView.xib in Resources */,
@@ -511,6 +518,7 @@
 			files = (
 				3A48BCDC1E8A8117009D5B19 /* TBike.swift in Sources */,
 				3A86C1DC1E9665CE0005DB01 /* CustomInfoView.swift in Sources */,
+				3AFD284D1ECE89EE005D8110 /* DistanceTableViewCell.swift in Sources */,
 				3AEB1C301E8A7E3F00AB7959 /* MapViewController.swift in Sources */,
 				3AEB1C2E1E8A7E3F00AB7959 /* AppDelegate.swift in Sources */,
 				3A3B1A541ECC0D1B00C7C496 /* DistanceViewController.swift in Sources */,

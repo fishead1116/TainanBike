@@ -64,6 +64,7 @@ class MapViewController: UIViewController {
         }
     }
     
+    
 //    func imageForView(view : UIView) -> UIImage? {
 //        
 //        if(UIScreen.main.responds(to: #selector(getter: UIScreen.scale))){
@@ -85,15 +86,32 @@ class MapViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let distance = segue.destination as? DistanceViewController{
-            distance.myLocation = mapView.myLocation
-            distance.markers = markers
+        
+        if let distanceViewController = segue.destination as? DistanceViewController{
+            
+            var markerDistances : [(GMSMarker,Double)] = []
+            guard let myLocation = mapView.myLocation else{
+                return
+            }
+            for marker in markers{
+                let markerLocation = CLLocation(latitude: marker.position.latitude, longitude: marker.position.longitude)
+                let distance = myLocation.distance(from: markerLocation)
+                markerDistances.append(marker,distance)
+            }
+        
+            distanceViewController.markerDistances = markerDistances
         }
     }
     
     
     @IBAction func unwindToMapView(segue:UIStoryboardSegue) {
         
+        optionSegmentedControl.selectedSegmentIndex = 0
+        if selectedMarker != nil{
+            mapView.camera = GMSCameraPosition.camera(withLatitude: selectedMarker!.position.latitude,longitude: selectedMarker!.position.longitude, zoom: 15)
+            _ = showCustomInfo(mapView: mapView, marker: selectedMarker!)
+            //mapView.selectedMarker = selectedMarker
+        }
     }
 }
 
@@ -158,6 +176,7 @@ extension MapViewController : GMSMapViewDelegate {
         reloadMarker()
     }
     
+    //http://kevinxh.github.io/swift/custom-and-interactive-googlemaps-ios-sdk-infowindow.html
     func mapView(_ mapView: GMSMapView, markerInfoWindow marker:
         GMSMarker) -> UIView? {
         
@@ -166,11 +185,14 @@ extension MapViewController : GMSMapViewDelegate {
     
     func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
         
-        //return true
+        return showCustomInfo(mapView: mapView, marker: marker)
+    }
+    func showCustomInfo(mapView: GMSMapView, marker: GMSMarker) -> Bool{
+        
         guard let pinView = marker.iconView as? CustomPinView else {
             return true
         }
-        
+
         
         selectedMarker = marker
         
@@ -188,8 +210,8 @@ extension MapViewController : GMSMapViewDelegate {
         infoView.center = mapView.projection.point(for: CLLocationCoordinate2DMake(pinView.bike!.latitude, pinView.bike!.longitude)) + infoViewOffset
         
         mapView.addSubview(infoView)
-        
-        return false
+    
+         return false
     }
     
     func mapView(_ mapView: GMSMapView, didChange position: GMSCameraPosition) {
