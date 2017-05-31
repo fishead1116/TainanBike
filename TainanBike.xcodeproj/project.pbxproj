@@ -26,6 +26,8 @@
 		3AEB1C381E8A7E3F00AB7959 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AEB1C361E8A7E3F00AB7959 /* LaunchScreen.storyboard */; };
 		3AEB1C431E8A7E3F00AB7959 /* TainanBikeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEB1C421E8A7E3F00AB7959 /* TainanBikeTests.swift */; };
 		3AEB1C4E1E8A7E3F00AB7959 /* TainanBikeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEB1C4D1E8A7E3F00AB7959 /* TainanBikeUITests.swift */; };
+		3AED186E1ED5588600D7564E /* TainanBike120.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AED186C1ED5588600D7564E /* TainanBike120.png */; };
+		3AED186F1ED5588600D7564E /* TainanBike180.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AED186D1ED5588600D7564E /* TainanBike180.png */; };
 		3AFD284D1ECE89EE005D8110 /* DistanceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFD284B1ECE89EE005D8110 /* DistanceTableViewCell.swift */; };
 		3AFD284E1ECE89EE005D8110 /* DistanceTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3AFD284C1ECE89EE005D8110 /* DistanceTableViewCell.xib */; };
 		B0D31A2FA787015133320685 /* Pods_TainanBikeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A27A18FCC5454E6CBCF042B2 /* Pods_TainanBikeTests.framework */; };
@@ -80,6 +82,8 @@
 		3AEB1C491E8A7E3F00AB7959 /* TainanBikeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TainanBikeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AEB1C4D1E8A7E3F00AB7959 /* TainanBikeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TainanBikeUITests.swift; sourceTree = "<group>"; };
 		3AEB1C4F1E8A7E3F00AB7959 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3AED186C1ED5588600D7564E /* TainanBike120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TainanBike120.png; sourceTree = "<group>"; };
+		3AED186D1ED5588600D7564E /* TainanBike180.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TainanBike180.png; sourceTree = "<group>"; };
 		3AFD284B1ECE89EE005D8110 /* DistanceTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DistanceTableViewCell.swift; path = View/DistanceTableViewCell.swift; sourceTree = "<group>"; };
 		3AFD284C1ECE89EE005D8110 /* DistanceTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DistanceTableViewCell.xib; path = View/DistanceTableViewCell.xib; sourceTree = "<group>"; };
 		A27A18FCC5454E6CBCF042B2 /* Pods_TainanBikeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TainanBikeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -130,6 +134,8 @@
 		3AD58BBA1E8D2EFC001FD891 /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				3AED186C1ED5588600D7564E /* TainanBike120.png */,
+				3AED186D1ED5588600D7564E /* TainanBike180.png */,
 				3A86C1DF1E966DAA0005DB01 /* Google_Maps_Icon.png */,
 				3ADDB1201E9382B100AE690E /* placeholder_blue.png */,
 				3ADDB1211E9382B100AE690E /* placeholder_green.png */,
@@ -344,10 +350,12 @@
 			files = (
 				3AEB1C381E8A7E3F00AB7959 /* LaunchScreen.storyboard in Resources */,
 				3ADDB1231E9382B100AE690E /* placeholder_green.png in Resources */,
+				3AED186E1ED5588600D7564E /* TainanBike120.png in Resources */,
 				3ADDB1221E9382B100AE690E /* placeholder_blue.png in Resources */,
 				3ADDB11F1E93828600AE690E /* placeholder_red.png in Resources */,
 				3AD58BBC1E8D2F2D001FD891 /* placeholder_32.png in Resources */,
 				3A86C1DE1E9665E00005DB01 /* CustomInfoView.xib in Resources */,
+				3AED186F1ED5588600D7564E /* TainanBike180.png in Resources */,
 				3AEB1C351E8A7E3F00AB7959 /* Assets.xcassets in Resources */,
 				3A86C1E01E966DAA0005DB01 /* Google_Maps_Icon.png in Resources */,
 				3AFD284E1ECE89EE005D8110 /* DistanceTableViewCell.xib in Resources */,
@@ -675,6 +683,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = Y9HFUQEZ8V;
 				INFOPLIST_FILE = TainanBike/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ddfish1116.TainanBike;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -689,6 +698,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = Y9HFUQEZ8V;
 				INFOPLIST_FILE = TainanBike/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ddfish1116.TainanBike;
 				PRODUCT_NAME = "$(TARGET_NAME)";
